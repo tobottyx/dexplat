@@ -44,6 +44,25 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <style>
+    .video-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .video-item {
+        flex: 1 1 30%; /* 每行三个视频 */
+        margin: 10px;
+    }
+
+    video {
+        width: 100%; /* 视频宽度填满每个容器 */
+        height: auto;
+    }
+</style>
+
 </head>
 
 <body>
@@ -59,16 +78,20 @@
                 <a target="_blank">Yinxiao Tian</a><sup>1</sup>,</span>
               <span class="author-block">
                 <a target="_blank">Zinan Zhao</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a target="_blank">Xiangchen Liu</a><sup>1</sup>,</span>
               <span class="author-block">
                 <a target="_blank">Mingyu Cai</a><sup>2</sup>,</span>
-              <span class="author-block">
+              
+                <span class="author-block">
                 <a target="_blank">Zhen Kan</a><sup>1</sup></span>  
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>University of Science and Technology,
-                                          <sup>2</sup>University of California
-                <br>ICRA 2025</span>
+              <span class="author-block"><sup>1</sup>University of Science and Technology of China,
+                                          <sup>2</sup>University of California, Riverside
+                                          
+                <br>submit to ICRA 2025</span>
               <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
             </div>
 
@@ -85,18 +108,18 @@
                 </span>
 
                 <!-- Supplementary PDF link -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="static/pdfs/supplementary_material.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
                     <span>Supplementary</span>
                   </a>
-                </span>
+                </span> -->
 
                 <!-- Github link -->
                 <span class="link-block">
-                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                  <a href="https://github.com/tobottyx/dexplat.git" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -106,7 +129,7 @@
                 </span>
 
                 <!-- ArXiv abstract Link -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -114,7 +137,7 @@
                     </span>
                     <span>arXiv</span>
                   </a>
-                </span>
+                </span> -->
               </div>
             </div>
           </div>
@@ -129,11 +152,11 @@
       <div class="hero-body">
         <video poster="" id="tree" autoplay controls muted loop height="100%">
           <!-- Your video here -->
-          <source src="static/videos/banner_video.mp4"
+          <source src="static/videos/bianhuan.mp4"
           type="video/mp4">
         </video>
         <h2 class="subtitle has-text-centered">
-          Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+         main_video
         </h2>
       </div>
     </div>
@@ -148,7 +171,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+              This article introduces an integrated platform, namely DexPlat, specifically designed to facilitate the transfer of human dexterous manipulations to robot hands through demonstration in different conditions. It employs an effective mapping method that enables the real-time transfer of human hand gestures to various dexterous robot hands using only a monocular camera, even in environments with varying levels of shade and self-obscuring elements. By incorporating pose and angle constraints, the high degree-of-freedom (DOF) dexterous hand, equipped with a root swinging function for the fingers, can achieve human-like postures while avoiding finger collisions. The dexterous hand mapping algorithm has been enhanced to address DOF discrepancies between human and robotic hands, significantly improving real-time skill transfer. This method has demonstrated superior performance in both simulated and physical environments
             </p>
           </div>
         </div>
@@ -156,117 +179,112 @@
     </div>
   </section>
   <!-- End paper abstract -->
+  <section class="hero is-small">
+    <div class="hero-body">
+        <div class="container" style="text-align: center;">
+            <div class="item">
+                <!-- 插入单张图片 -->
+                <img src="static/images/frame3.png" alt="MY ALT TEXT" width="1000" height="1000" style="display: block; margin: 0 auto;" />
+                <h2 class="subtitle has-text-centered">
+                    Framework of DexPlat
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 
   <!-- Image carousel -->
   <section class="hero is-small">
     <div class="hero-body">
-      <div class="container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-            <h2 class="subtitle has-text-centered">
-              First image description.
-            </h2>
-          </div>
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-            <h2 class="subtitle has-text-centered">
-              Second image description.
-            </h2>
-          </div>
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-            <h2 class="subtitle has-text-centered">
-              Third image description.
-            </h2>
-          </div>
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-            <h2 class="subtitle has-text-centered">
-              Fourth image description.
-            </h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End image carousel -->
-
-  <!-- Youtube video -->
-  <section class="hero is-small is-light">
-    <div class="hero-body">
-      <div class="container">
-        <!-- Paper video. -->
-        <h2 class="title is-3">Video Presentation</h2>
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <div class="publication-video">
-              <!-- Youtube embed code here -->
-              <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div class="container">
+            <div id="results-carousel" class="carousel results-carousel">
+                <div class="item" style="text-align: center;">
+                    <!-- First image -->
+                    <img src="static/images/grasp_dexycb.png" alt="MY ALT TEXT" style="display: block; margin: 0 auto; width: 800px; height: 600px;" />
+                    <h2 class="subtitle has-text-centered">
+                      Grasp objects in Dexycb
+                    </h2>
+                </div>
+                <div class="item" style="text-align: center;">
+                    <!-- Second image -->
+                    <img src="static/images/real_world.png" alt="MY ALT TEXT" style="display: block; margin: 0 auto; width: 800px; height: 600px;" />
+                    <h2 class="subtitle has-text-centered">
+                        Real-world experiments
+                    </h2>
+                </div>
+                <div class="item" style="text-align: center;">
+                    <!-- Third image -->
+                    <img src="static/images/manipulations.png" alt="MY ALT TEXT" style="display: block; margin: 0 auto; width: 800px; height: 600px;" />
+                    <h2 class="subtitle has-text-centered">
+                      The tasks of using nail guns, scissors, and door opening
+                      
+                    </h2>
+                </div>
+                <div class="item" style="text-align: center;">
+                    <!-- Fourth image -->
+                    <img src="static/images/sim_3.png" alt="MY ALT TEXT" style="display: block; margin: 0 auto; width: 800px; height: 600px;" />
+                    <h2 class="subtitle has-text-centered">
+                        Other tasks in simulation
+                    </h2>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </section>
-  <!-- End youtube video -->
+</section>
 
-  <!-- Video carousel -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title is-3">Another Carousel</h2>
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item item-video1">
-            <video poster="" id="video1" autoplay controls muted loop height="100%">
-              <!-- Your video file here -->
-              <source src="static/videos/carousel1.mp4"
-              type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-video2">
-            <video poster="" id="video2" autoplay controls muted loop height="100%">
-              <!-- Your video file here -->
-              <source src="static/videos/carousel2.mp4"
-              type="video/mp4">
-            </video>
-          </div>
-          <div class="item item-video3">
-            <video poster="" id="video3" autoplay controls muted loop height="100%">\
-              <!-- Your video file here -->
-              <source src="static/videos/carousel3.mp4"
-              type="video/mp4">
-            </video>
-          </div>
-        </div>
+
+  <!-- End image carousel -->
+  <section class="my_sectoion">
+    <div class="video-container">
+      <!-- 第一行 -->
+      <div class="video-item">
+          <video src="static/videos/beizi.mp4" controls></video>
+          <h2 class="subtitle has-text-centered">
+            Grasp a cup
+          </h2>
       </div>
-    </div>
-  </section>
-  <!-- End video carousel -->
-
-  <!-- Paper poster -->
-  <section class="hero is-small is-light">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title">Poster</h2>
-        <iframe  src="static/pdfs/sample.pdf" width="100%" height="550"></iframe>
+      <div class="video-item">
+          <video src="static/videos/jibenben.mp4" controls></video>
+          <h2 class="subtitle has-text-centered">
+            Open a laptop
+          </h2>
       </div>
-    </div>
+      <div class="video-item">
+          <video src="static/videos/shupian.mp4" controls></video>
+          <h2 class="subtitle has-text-centered">
+            Grasping a chips can
+          </h2>
+      </div>
+  
+      <!-- 第二行 -->
+      <div class="video-item">
+          <video src="static/videos/drill.mp4" controls></video>
+          <h2 class="subtitle has-text-centered">
+            Proper use of a nail gun
+          </h2>
+      </div>
+      <div class="video-item">
+          <video src="static/videos/box.mp4" controls></video>
+          <h2 class="subtitle has-text-centered">
+            Grasp a foam brick
+          </h2>
+      </div>
+      <div class="video-item">
+          <video src="static/videos/hammer.mp4" controls></video>
+          <h2 class="subtitle has-text-centered">
+            Catch a hammer
+          </h2>
+      </div>
   </section>
-  <!--End paper poster -->
-
   <!--BibTex citation -->
-  <section class="section" id="BibTeX">
+  <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>BibTex Code Here</code></pre>
     </div>
-  </section>
+  </section> -->
   <!--End BibTex citation -->
 
   <footer class="footer">
@@ -275,9 +293,7 @@
         <div class="column is-8">
           <div class="content">
             <p>
-              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-              You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-              Commons Attribution-ShareAlike 4.0 International License</a>.
+              This webpage is created by Yinxiao Tian. For any questions regarding papers, please contact tianyx618@ustc.edu.cn.
             </p>
           </div>
         </div>
